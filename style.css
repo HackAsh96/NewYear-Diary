@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
+body{
+  background: black;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+.center{
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: 2s;
+}
+input[type="checkbox"]{
+  position: relative;
+  width: 70px;
+  height: 30px;
+  -webkit-appearance:none;
+  background: linear-gradient(0deg, #333, #000);
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px
+  rgba(0,0,0,1), 0 5px 20px rgba(0,0,0,.5), inset 0 0 15px rgba(0,0,0,.2);
+}
+input[type="checkbox"]:hover{
+  cursor: pointer;
+}
+input[type="checkbox"]:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(0deg, #000, #6b6b6b);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(.98,.96);
+  transition: .5s;
+}
+input:checked[type="checkbox"]:before{
+  left: 30px;
+}
+input[type="checkbox"]:after{
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 25px;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(0deg, #6b6b6b, #000);
+  border-radius: 50%;
+  transition: .5s;
+}
+input:checked[type="checkbox"]:after{
+  left: 55px;
+  background: #63cdff;
+  box-shadow: 0 0 5px #13b3ff;
+}
+input:checked[type="checkbox"]{
+  background: linear-gradient(0deg, #6dd1ff, #20b7ff);
+  box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px
+  rgba(0,0,0,1), 0 5px 20px rgba(0,0,0,.5), inset 0 0 15px rgba(0,0,0,.2);
+}
+.checkbox{
+  display: none;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #d8d8d8, #cccccc);
+  border-top: 0.02em solid #ececec;
+  border-bottom: 0.02em solid #ececec;
+}
+.checkbox .inner{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(0deg, #a5a5a5, #717171);
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+}
+.checkbox .inner .toggle{
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #cccccc, #e4e4e4);
+  box-shadow: 0 4px 6px rgba(0,0,0,.2);
+  box-sizing: border-box;
+  border-top: 0.04em solid #ececec;
+  border-bottom: 0.01em solid #ececec;
+  transition: .5s;
+}
+.checkbox .inner .toggle:hover{
+  cursor: pointer;
+}
+.checkbox .inner .toggle::before{
+  content: 'OFF';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: linear-gradient(0deg, #e4e4e4, #ccc);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #717171;
+}
+.checkbox .inner.active .toggle::before{
+  content: 'ON';
+  color: #00d22d;
+}
+.checkbox .inner.active .toggle{
+  left: 47px;
+}
+.checkbox .inner.active{
+  background: linear-gradient(0deg, #00d22d, #158a00);
+}
+
+#container {
+  display: none;
+  position: absolute;
+  top:50px;
+  left: 50%;
+  transform: translate(-50%);
+  width: auto;
+}
+#selector{
+  position: absolute;
+  top: 0;
+  width: 154px;
+  height: 80px;
+  background: black;
+  border-radius: 25px ;
+  z-index: 1;
+}
+.year19 {
+  position: relative;
+  font-size: 80px;
+  font-family: 'Josefin Slab', serif;
+  color: #63cdff;
+  text-align: center;
+  text-shadow: 0 0 5px #13b3ff;
+  animation: shaky 1s infinite .7s;
+}
+@keyframes shaky {
+  0% {
+    transform: rotate(0deg);
+    color: black;
+  }
+  25% {
+    transform: rotate(10deg);
+    color: #FF9F1C;
+  }
+  50% {
+    transform: rotate(0deg);
+    color: #E71D36;
+  }
+  75% {
+    transform: rotate(10deg);
+    color: #2EC4B6;
+  }
+  100% {
+    transform: rotate(0deg);
+    color: black;
+  }
+}
+h4 {
+  position: relative;
+  top: -60px;
+  font-size: 26px;
+  line-height: 1px;
+  font-family: 'Happy Monkey', cursive;
+}
+
+.color1{color:#1BBC9B}
+.color2{color:#C0392B}
+
+
+.card {
+  color: #013243;
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  opacity: 0;
+  background: #e0e1dc;
+  transform-style: preserve-3d;
+  transform: translate(-50%,-50%) perspective(2000px);
+  box-shadow: 20px 10px 20px rgba(255,255,255,.3);
+}
+
+.card:hover {
+  transform: translate(-50%,-50%) perspective(2000px)  scale(1.1);
+}
+
+.card:before {
+  content:'';
+  position: absolute;
+  top: -9px;
+  left: 0px;
+  width: 100%;
+  height: 9px;
+  background: #e0e1dc;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -9px;
+  width: 10px;
+  height: 100%;
+  background: #e0e1dc;
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  background: white;
+  transition: 2s;
+  z-index: 4;
+}
+.card .bark {
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 3;
+  transition: 2s;
+}
+
+.card .box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  z-index: -1;
+  transform-origin: left;
+  transition: 1s;
+}
+.card .b {
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  transition: 1s;
+}
+
+.card .imgBox img {
+  position: relative;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 100px;
+}
+#book{
+  margin: 0;
+  position: relative;
+  width: auto;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%);
+  text-transform: uppercase;
+  color: #000;
+  font-family: 'Happy Monkey', cursive;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 20px;
+}
+span{
+  font-size: 7px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.card .imgBox #pic{
+  position: relative;
+  top: 0%;
+  left: 25%;
+  transform: translate(-50%);
+  width: 117px;
+  height: 119px;
+}
+.card .imgBox #pic2{
+  position: relative;
+  top: 0%;
+  left: 35%;
+  transform: translate(-50%);
+  width: 117px;
+  height: 119px;
+}
+.card .imgBox #pic3{
+  position: relative;
+  top: 0%;
+  left: 25%;
+  transform: translate(-50%);
+  width: 117px;
+  height: 119px;
+}
+.card .imgBox #pic4{
+  position: relative;
+  top: 0%;
+  left: 35%;
+  transform: translate(-50%);
+  width: 117px;
+  height: 119px;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-135deg);
+  transition: 1s;
+}
+.card:hover .bark {
+  opacity: 1;
+  transition: .6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, .2) inset;
+}
+
+.card:hover .box {
+  transform: rotateY(-135deg);
+  transition: 2s;
+  width: 90%;
+}
+.card:hover .b {
+  opacity: 1;
+  transition: .6s;
+  box-shadow: 300px 200px 100px rgba(50, 50, 50, .2) inset;
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  z-index: -2;
+  margin-top: 70px;
+}
+.text-signature {
+  text-align: center;
+  transform: translateY(5px);
+  text-decoration: underline;
+}
+.text-footer {
+  text-align: center;
+  color: #1BBC9B;
+  font-weight: bold;
+}
+
+.card .details p {
+  position: relative;
+  top: -50px;
+  font-size: 15px;
+  line-height: 10px;
+  text-transform: uppercase;
+  font-family: 'Josefin Slab', serif;
+  padding: 0 0 0 10px;
+}
+
+.card .details h4 {
+  text-align: center;
+}
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 30px;
+  font-weight:lighter;
+  color: #fff;
+  text-shadow: 0 2px 5px #95f80a;
+}
