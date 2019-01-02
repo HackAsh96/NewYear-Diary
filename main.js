@@ -15,35 +15,40 @@ $(document).ready(function(){
   });
   setTimeout(()=>{
     typed.typewrite('Toggle the switch 😎',0);
-    $('.center').css('display','block').click(function(){
-      setTimeout(()=>{
-        $('#container').css('display','block');
-        $('.checkbox').css('display','block');
-        $('.center').css('display','none');
-        $('.type').css('display','none');
-        $('.inner').toggleClass('active');
-        $('body').css({'background':'#000','overflow':'auto'});
-        $('#selector').css('background','#000').animate({opacity:0},500);
-        $('.card').animate({opacity:1},500);
-        let id = setInterval(frame, 15);
-        let pos = 0;
-        function frame() {
-          if (pos  == 80) {
-            clearInterval(id);
-            $('#selector').css('box-shadow','none');
-          } else {
-            pos++;
-            $('#selector').css('top',pos+'px');
-          }
+    $('.center')
+    .css('display','block')
+    .toggleClass('active')
+    .click(function(){
+      $('#container').css('display','block');
+      $('.type').css('display','none');
+      $('#selector')
+      .css('background','#000')
+      .animate({opacity:0},2000);
+      $('.card')
+      .css('display','block')
+      .animate({opacity:1},500);
+      let id = setInterval(frame, 15);
+      let pos = 0;
+      function frame() {
+        if (pos  == 80) {
+          clearInterval(id);
+          $('#selector').css('box-shadow','none');
+        } else {
+          pos++;
+          $('#selector').css('top',pos+'px');
         }
-        $('.toggle').click(function(){
-          $('.inner').removeClass('active')
-          setTimeout(()=>{location.reload(true)},1000);
-          $('body').css('background','black');
-          $('#container').animate({opacity:0},500);
-          $('.card').animate({opacity:0},500);
-        })
-      },1000);
+      }
+      $('.center').click(function(){
+        $('.center').removeClass('active');
+        setTimeout(()=>{
+          location.reload(true)
+        },2000);
+        $('.center').animate({opacity:0},500);
+        $('#container').animate({opacity:0},500);
+        $('.card')
+        .animate({opacity:0},500)
+        .css('display','none');
+      })
     })
-  },40000);
+  },30000);
 })
