@@ -11,7 +11,7 @@ $(document).ready(function(){
       '2018'
     ],
     typeSpeed: 50,
-    backSpeed: 20,
+    backSpeed: 10,
   });
   setTimeout(()=>{
     typed.typewrite('Toggle the switch 😎',0);
