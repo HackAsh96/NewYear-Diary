@@ -43,7 +43,7 @@ $(document).ready(function(){
           $('#container').animate({opacity:0},500);
           $('.card').animate({opacity:0},500);
         })
-      },500);
+      },1000);
     })
-  },30000);
+  },40000);
 })
