@@ -65,4 +65,4 @@ $(document).ready(function(){
       })
     })
   },29000);
-}).bind('touchstart',function() {},false);
+}).bind('touchstart',function() {},false);//this line is particular for the IOS system in order to catch the :hover
