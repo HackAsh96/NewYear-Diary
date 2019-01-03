@@ -279,6 +279,7 @@ h4 {
 
 .card:hover {
   transform: translate(-50%,-50%) perspective(2000px)  scale(1.1);
+  cursor: pointer;
 }
 
 .card:before {
@@ -406,21 +407,25 @@ h4 {
 
 .card:hover .imgBox {
   transform: rotateY(-135deg);
+  cursor: pointer;
   transition: 1s;
 }
 .card:hover .bark {
   opacity: 1;
+  cursor: pointer;
   transition: .6s;
   box-shadow: 300px 200px 100px rgba(0, 0, 0, .2) inset;
 }
 
 .card:hover .box {
   transform: rotateY(-135deg);
+  cursor: pointer;
   transition: 2s;
   width: 90%;
 }
 .card:hover .b {
   opacity: 1;
+  cursor: pointer;
   transition: .6s;
   box-shadow: 300px 200px 100px rgba(50, 50, 50, .2) inset;
 }
