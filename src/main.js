@@ -1,3 +1,4 @@
+document.addEventListener("touchstart", function() {},false);
 $(document).ready(function(){
   // const typed = new Typed(".type", {
   //   strings: [
