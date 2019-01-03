@@ -1,6 +1,5 @@
-document.addEventListener("touchstart", function() {},false);
 $(document).ready(function(){
-  const typed = new Typed(".type", {
+  const typed = new Typed('.type', {
     strings: [
       'Hello everybody,',
       'This year has passed , now we are in 2019.',
@@ -66,4 +65,4 @@ $(document).ready(function(){
       })
     })
   },30000);
-})
+}).bind('touchstart',function() {},false);
