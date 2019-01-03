@@ -1,21 +1,21 @@
 document.addEventListener("touchstart", function() {},false);
 $(document).ready(function(){
-  // const typed = new Typed(".type", {
-  //   strings: [
-  //     'Hello everybody,',
-  //     'This year has passed , now we are in 2019.',
-  //     'I have made this app with some cool design,',
-  //     'in order to thank you and thank all the CopenhagenJS community',
-  //     'cause if I can do this now ,',
-  //     'it is because of your teaching and help.',
-  //     'Thank you',
-  //     '2018'
-  //   ],
-  //   typeSpeed: 50,
-  //   backSpeed: 10,
-  // });
+  const typed = new Typed(".type", {
+    strings: [
+      'Hello everybody,',
+      'This year has passed , now we are in 2019.',
+      'I have made this app with some cool design,',
+      'in order to thank you and thank all the CopenhagenJS community',
+      'cause if I can do this now ,',
+      'it is because of your teaching and help.',
+      'Thank you',
+      '2018'
+    ],
+    typeSpeed: 50,
+    backSpeed: 10,
+  });
   setTimeout(()=>{
-    // typed.typewrite('Toggle the switch 😎',0);
+    typed.typewrite('Toggle the switch 😎',0);
     $('.center')
     .css('display','block')
     .toggleClass('active')
@@ -65,5 +65,5 @@ $(document).ready(function(){
         .css('display','none');
       })
     })
-  },500);
+  },30000);
 })
