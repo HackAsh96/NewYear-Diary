@@ -19,6 +19,19 @@ $(document).ready(function(){
     .css('display','block')
     .toggleClass('active')
     .click(function(){
+      if(screen.width< 812){
+      $('li').css('animation','none');
+      $('#container')
+      .css('display','block')
+      .animate({opacity:1},500);
+      $('.type').css('display','none');
+      $('#selector').css('display','none');
+      $('.card')
+      .css('display','block')
+      .animate({opacity:1},500);
+    }
+    else{
+      $('li').css('animation','none');
       $('#container').css('display','block');
       $('.type').css('display','none');
       $('#selector')
@@ -38,6 +51,7 @@ $(document).ready(function(){
           $('#selector').css('top',pos+'px');
         }
       }
+    }
       $('.center').click(function(){
         $('.center').removeClass('active');
         setTimeout(()=>{
@@ -50,5 +64,5 @@ $(document).ready(function(){
         .css('display','none');
       })
     })
-  },30000);
+  },27000);
 })
