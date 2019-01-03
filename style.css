@@ -409,7 +409,6 @@ h4 {
 
 .card:hover .imgBox {
   transform: rotateY(-135deg);
-  cursor: pointer;
   transition: 1s;
 }
 .card:hover .bark {
