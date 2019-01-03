@@ -64,5 +64,5 @@ $(document).ready(function(){
         .css('display','none');
       })
     })
-  },30000);
+  },29000);
 }).bind('touchstart',function() {},false);
